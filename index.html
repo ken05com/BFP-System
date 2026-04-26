@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>BFP R10 Inventory Management</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <link rel="icon" type="image/x-icon" href="images/logo.jpg">
+
+    <link rel="stylesheet" href="index-style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body class="bg-gradient-custom">
+
+    <nav class="navbar navbar-expand-sm navbar-light bg-white fixed-top shadow-sm">
+        <div style="justify-content: left;" class="container-fluid">
+            <a class="navbar-brand" href="#">
+                <img class="logoimg" src="images/logo.jpg" alt="BFP Logo" style="height: 50px;">
+            </a>
+            <div class="font-weight-bold">Bureau of Fire Protection</div>
+
+            <!-- <ul class="navbar-nav ml-auto">
+                <li class="nav-item"><a class="nav-link" href="#">Profile</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Reports</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Logout</a></li>
+            </ul> -->
+        </div>
+    </nav>
+
+    <main class="container-fluid content-wrapper">
+        <div class="row align-items-center min-vh-100 gx-5 justify-content-between px-5">
+
+            <div class="col-md-6 text-white px-md-5">
+                <h1 class="display-4 font-weight-bold">Welcome to BFP R10 Inventory Management</h1>
+                <p class="lead">
+                    Welcome to the official BFP R10 Logistic and Supply Management System.
+                    This platform serves as our centralized hub for real-time resource monitoring and streamlined
+                    supply requesting, ensuring that our station remains fully equipped and ready to respond
+                    to the needs of the Balingasag community at a moment's notice.
+                </p>
+            </div>
+
+            <div class="col-md-6">
+                <div style="background-color: rgba(255, 255, 255, 0.1); padding: 20px; border-radius: 10px; width: 600px; margin: auto;">
+                    <h3 class="text-white text-center mb-4">Login</h3>
+                    <form action="/action_page.php">
+                        <div class="form-group">
+                            <label for="email" class="text-white">Email address:</label>
+                            <input type="email" class="form-control" placeholder="Enter email" id="email">
+                        </div>
+                        <div class="form-group">
+                            <label for="pwd" class="text-white">Password:</label>
+                            <input type="password" class="form-control" placeholder="Enter password" id="pwd">
+                        </div>
+                        <div class="form-group form-check">
+                            <label class="form-check-label text-white">
+                                <input class="form-check-input" type="checkbox"> Remember me
+                            </label>
+                        </div>
+                        <button type="button" onclick="window.location.href='bfp-dashboard.html'" class="btn btn-light btn-block font-weight-bold">Login</button>
+                    </form>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+</body>
+
+</html>
