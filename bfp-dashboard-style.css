@@ -30,8 +30,9 @@ html {
 
 /* Specific styling for the white navbar */
 .navbar {
-    background-color: white !important;
+    background-color: #fd9133 !important;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    color: white;
     /* Adds depth against the bright gradient */
 }
 

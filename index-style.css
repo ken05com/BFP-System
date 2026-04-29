@@ -11,8 +11,7 @@ body {
     background-attachment: fixed;
     background-repeat: no-repeat;
     
-    /* Push content down so it doesn't hide behind the fixed navbar */
-    padding-top: 80px; 
+
 }
 
 .logoimg {
@@ -21,21 +20,6 @@ body {
     object-fit: contain; /* Keeps the logo from stretching */
 }
 
-/* Specific styling for the white navbar */
-.navbar {
-    background-color: white !important;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1); /* Adds depth against the bright gradient */
-}
-
-/* Target the nav-links specifically */
-.navbar-light .navbar-nav .nav-link {
-    color: #333;
-    font-weight: 500;
-}
-
-.navbar-light .navbar-nav .nav-link:hover {
-    color: #D32F2F; /* Turns red from your palette on hover */
-}
 
 label {
     color: white;
@@ -43,3 +27,15 @@ label {
     margin-bottom: 10px;
 }
 
+footer {
+    background-color: #F37021;
+    padding: 10px;
+    text-align: center;
+    color: white;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    
+}

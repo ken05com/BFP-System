@@ -21,28 +21,16 @@
         rel="stylesheet">
 </head>
 
-<body class="bg-gradient-custom">
+<body style="margin: 50px;" class="bg-gradient-custom">
 
-    <nav class="navbar navbar-expand-sm navbar-light bg-white fixed-top shadow-sm">
-        <div style="justify-content: left;" class="container-fluid">
-            <a class="navbar-brand" href="#">
-                <img class="logoimg" src="images/logo.jpg" alt="BFP Logo" style="height: 50px;">
-            </a>
-            <div class="font-weight-bold">Bureau of Fire Protection</div>
-
-            <!-- <ul class="navbar-nav ml-auto">
-                <li class="nav-item"><a class="nav-link" href="#">Profile</a></li>
-                <li class="nav-item"><a class="nav-link" href="#">Reports</a></li>
-                <li class="nav-item"><a class="nav-link" href="#">Logout</a></li>
-            </ul> -->
-        </div>
-    </nav>
-
-    <main class="container-fluid content-wrapper">
-        <div class="row align-items-center min-vh-100 gx-5 justify-content-between px-5">
+    <div class="container-fluid content-wrapper">
+        <div style="padding-top: 200px;" class="row gx-5 justify-content-between px-5">
 
             <div class="col-md-6 text-white px-md-5">
-                <h1 class="display-4 font-weight-bold">Welcome to BFP R10 Inventory Management</h1>
+                <div style="display: flex; align-items: center; margin-bottom: 10px;">
+                    <img style="display: flex; height: 230px; margin-right: 20px;" src="images/logo.jpg" alt="BFP Logo">
+                    <h1 style="font-size: 50px;" class="display-4 font-weight-bold">BFP R10 Inventory Management</h1>
+                </div>
                 <p class="lead">
                     Welcome to the official BFP R10 Logistic and Supply Management System.
                     This platform serves as our centralized hub for real-time resource monitoring and streamlined
@@ -51,8 +39,9 @@
                 </p>
             </div>
 
-            <div class="col-md-6">
-                <div style="background-color: rgba(255, 255, 255, 0.1); padding: 20px; border-radius: 10px; width: 600px; margin: auto;">
+            <div style="padding-left: 90px;" class="col-md-6">
+                <div
+                    style="background-color: rgba(255, 255, 255, 0.1); padding: 20px; border-radius: 10px; width: 600px; margin: auto;">
                     <h3 class="text-white text-center mb-4">Login</h3>
                     <form action="/action_page.php">
                         <div class="form-group">
@@ -68,13 +57,22 @@
                                 <input class="form-check-input" type="checkbox"> Remember me
                             </label>
                         </div>
-                        <button type="button" onclick="window.location.href='bfp-dashboard.html'" class="btn btn-light btn-block font-weight-bold">Login</button>
+                        <button style="background-color: skyblue; border: 1px solid grey; border-radius: 10px;"
+                            type="button" onclick="window.location.href='bfp-dashboard.html'"
+                            class="btn btn-light btn-block font-weight-bold">Login</button>
                     </form>
                 </div>
             </div>
 
         </div>
-    </main>
+    </div>
+
+
+    <footer style="background-color: white; color: black; padding-top: 30px;">
+        <div class="container">
+            <p>&copy; 2023 BFP Dashboard. All rights reserved.</p>
+        </div>
+    </footer>
 
 </body>
 
