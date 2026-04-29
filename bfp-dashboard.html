@@ -37,9 +37,7 @@
             <div class="font-weight-bold">Bureau of Fire Protection</div>
 
             <ul class="navbar-nav ml-auto">
-                <li class="nav-item"><a class="nav-link" href="#"><img style="margin-right: 15px;"
-                            src="images/profile.png" alt=""> Profile</a></li>
-                <li class="nav-item"><a class="nav-link" href="#"><img style="margin-right: 15px;" src="images/file.png"
+                <li class="nav-item"><a class="nav-link" href="reports.html"><img style="margin-right: 15px;" src="images/file.png"
                             alt="">Reports</a></li>
                 <li class="nav-item"><a class="nav-link" href="index.html"><img style="margin-right: 15px;"
                             src="images/logout.png" alt="">Logout</a></li>
@@ -71,15 +69,20 @@
                         <h3>50</h3>
                     </div>
                 </div>
-                <div style="height: 250px;" class="card bg-light" role="button" tabindex="0" onclick="window.location.href='bfp-dashboard.html'">
+                <div style="height: 250px;" class="card bg-light" role="button" tabindex="0" onclick="window.location.href='archive.html'">
                     <div class="card-body text-center">
-                        <p class="card-text">Total of Maintenance</p>
-                        <h3>25</h3>
+                        <img src="images/archive.png" alt="">
+                        <br>
+                        <h3>Archive</h3>
                     </div>
                 </div>
             </div>
             <h2>Hover Rows</h2>
             <p>The .table-hover class enables a hover state (grey background on mouse over) on table rows:</p>
+            <div style="justify-content: flex-start; display: flex; align-items: start;" class="mb-3">
+                <input style="width: 30%;" class="form-control mr-sm-2" type="text" placeholder="Search">
+                <button class="btn btn-outline-primary">Search</button>
+            </div>  
             <table class="table table-hover">
                 <thead>
                     <tr>
@@ -125,6 +128,16 @@
                     </tr>
                 </tbody>
             </table>
+            <div style="display: flex; justify-content: center;" class="pagination">
+                <a href="#">&laquo;</a>
+                <a href="#">1</a>
+                <a class="active" href="#">2</a>
+                <a href="#">3</a>
+                <a href="#">4</a>
+                <a href="#">5</a>
+                <a href="#">6</a>
+                <a href="#">&raquo;</a>
+            </div>
         </div>
     </main>
 
