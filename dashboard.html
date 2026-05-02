@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <title>Inventory</title>
+    <title>BFP R10 Dashboard</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
@@ -12,7 +12,7 @@
 
     <link rel="icon" type="image/x-icon" href="images/logo.jpg">
 
-    <link rel="stylesheet" href="bfp-invetory-style.css">
+    <link rel="stylesheet" href="bfp-dashboard-style.css">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -23,8 +23,8 @@
 
 <body class="bg-gradient-custom">
     <div style="margin-top: -4px;" class="sidebar">
-        <a href="dashboard.html">Home</a>
-        <a class="active" href="inventory.html">Inventory</a>
+        <a class="active" href="dashboard.html">Home</a>
+        <a href="inventory.html">Inventory</a>
         <a href="requests.html">Requests Form</a>
         <a href="#about">About</a>
     </div>
@@ -50,12 +50,34 @@
         </div>
     </nav>
 
+
     <main style="justify-content: center;" class="container-fluid content-wrapper">
         <br>
         <div class="container">
+            <div class="card-columns">
+
+                <div style="height: 250px;" class="card bg-light">
+                    <div class="card-body text-center">
+                        <p class="card-text">Total of Equipment</p>
+                        <h3>100</h3>
+                    </div>
+                </div>
+                <div style="height: 250px; padding-top: 65px;" class="card bg-light">
+                    <div class="card-body text-center">
+                        <p class="card-text">Total of Reports</p>
+                        <h3>25</h3>
+                    </div>
+                </div>
+                <div style="height: 250px; padding-top: 65px;" class="card bg-light">
+                    <div class="card-body text-center">
+                        <p class="card-text">Total of Requests</p>
+                        <h3>50</h3>
+                    </div>
+                </div>
+            </div>
             <div style="justify-content: space-between; display: flex; align-items: start;" class="mb-3">
                 <div style="display: table-row;">
-                    <h2 style="width: 100%; font-weight: bold; ">INVENTORY</h2>
+                    <h2 style="width: 100%; font-weight: bold">List of Equipments</h2>
                     <p style="width: 150%;">The table below shows the list of all equipment in the inventory:</p>
                 </div>
                 <div style="display: flex; align-items: end; justify-content: end; width: 100%; margin-top: 35px;">
@@ -70,7 +92,6 @@
                             alt="">Archive</button>
                 </div>
             </div>
-            <br>
             <table class="table table-hover">
                 <thead>
                     <tr>
@@ -79,7 +100,6 @@
                         <th>Equipment</th>
                         <th>Status</th>
                         <th>Assigned To</th>
-                        <th>Actions</th>
 
                     </tr>
                 </thead>
@@ -87,67 +107,37 @@
                     <tr>
                         <td>1</td>
                         <td>BC-COAT-01</td>
-                        <td>Fireman's Coat (5M, 7L)</td>
-                        <td>12 Available</td>
+                        <td>Fireman's Coat (5 Med, 7 Lrg)</td>
+                        <td>12 Units Available</td>
                         <td>Balingasag FS</td>
-                        <td>
-                            <button class="btn btn-sm btn-primary"
-                                onclick="alert('The Edit function is not implemented yet.')">Edit</button>
-                            <button style="background-color: #F37021;" class="btn btn-sm btn-danger"
-                                onclick="alert('Item has been moved to the Archive.')">Archive</button>
-                        </td>
                     </tr>
                     <tr>
                         <td>2</td>
                         <td>BC-TRSR-01</td>
-                        <td>Fireman's Trousers (5M, 2L)</td>
-                        <td>7 Available</td>
+                        <td>Fireman's Trousers (5 Med, 2 Lrg)</td>
+                        <td>7 Units Available</td>
                         <td>Balingasag FS</td>
-                        <td>
-                            <button class="btn btn-sm btn-primary"
-                                onclick="alert('The Edit function is not implemented yet.')">Edit</button>
-                            <button style="background-color: #F37021;" class="btn btn-sm btn-danger"
-                                onclick="alert('Item has been moved to the Archive.')">Archive</button>
-                        </td>
                     </tr>
                     <tr>
                         <td>3</td>
                         <td>BC-BT-4147</td>
-                        <td>Fire Boots (Multi-Size)</td>
-                        <td>14 Available</td>
+                        <td>Fire Boots (Various Sizes)</td>
+                        <td>14 Pairs Available</td>
                         <td>Balingasag FS</td>
-                        <td>
-                            <button class="btn btn-sm btn-primary"
-                                onclick="alert('The Edit function is not implemented yet.')">Edit</button>
-                            <button style="background-color: #F37021;" class="btn btn-sm btn-danger"
-                                onclick="alert('Item has been moved to the Archive.')">Archive</button>
-                        </td>
                     </tr>
                     <tr>
                         <td>4</td>
                         <td>BC-HOOD-01</td>
                         <td>Fireman's Hood</td>
-                        <td>4 Available</td>
+                        <td>4 Units Available</td>
                         <td>Balingasag FS</td>
-                        <td>
-                            <button class="btn btn-sm btn-primary"
-                                onclick="alert('The Edit function is not implemented yet.')">Edit</button>
-                            <button style="background-color: #F37021;" class="btn btn-sm btn-danger"
-                                onclick="alert('Item has been moved to the Archive.')">Archive</button>
-                        </td>
                     </tr>
                     <tr>
                         <td>5</td>
                         <td>BC-SCBA-01</td>
                         <td>SCBA</td>
-                        <td>4 Available</td>
+                        <td>4 Units Available</td>
                         <td>Balingasag FS</td>
-                        <td>
-                            <button class="btn btn-sm btn-primary"
-                                onclick="alert('The Edit function is not implemented yet.')">Edit</button>
-                            <button style="background-color: #F37021;" class="btn btn-sm btn-danger"
-                                onclick="alert('Item has been moved to the Archive.')">Archive</button>
-                        </td>
                     </tr>
                     <tr>
                         <td>6</td>
@@ -155,23 +145,8 @@
                         <td>Fire Extinguisher</td>
                         <td>1 Available / 1 Unserviceable</td>
                         <td>Balingasag FS</td>
-                        <td>
-                            <button class="btn btn-sm btn-primary"
-                                onclick="alert('The Edit function is not implemented yet.')">Edit</button>
-                            <button style="background-color: #F37021;" class="btn btn-sm btn-danger"
-                                onclick="alert('Item has been moved to the Archive.')">Archive</button>
-                        </td>
                     </tr>
                 </tbody>
-                <tfoot class="thead-light">
-                    <tr class="font-weight-bold">
-                        <td colspan="6" style="text-align: right;">
-                            <div>
-                                <button style="width: 100%; background-color: #F37021; border-radius: 5px; color: white; border: none; padding: 10px 20px; cursor: pointer;" onclick="alert('Exported to Excel')">Export to Excel</button>
-                            </div>
-                        </td>
-                    </tr>
-                </tfoot>
             </table>
             <div style="display: flex; padding-bottom: 130px; justify-content: center;" class="pagination">
                 <span id="page1" class="page-target"></span>
@@ -189,7 +164,6 @@
                 <a href="#page6">6</a>
                 <a href="#page7">&raquo;</a>
             </div>
-            
         </div>
     </main>
 

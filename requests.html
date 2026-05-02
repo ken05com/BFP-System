@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <title>Requests</title>
+    <title>Requests Form</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
@@ -22,10 +22,10 @@
 </head>
 
 <body class="bg-gradient-custom">
-    <div class="sidebar">
-        <a class="active" href="bfp-dashboard.html">Home</a>
+    <div style="margin-top: -4px;" class="sidebar">
+        <a href="dashboard.html">Home</a>
         <a href="inventory.html">Inventory</a>
-        <a href="requests.html">Requests</a>
+        <a class="active" href="requests.html">Requests Form</a>
         <a href="#about">About</a>
     </div>
 
@@ -37,10 +37,15 @@
             <div class="font-weight-bold">Bureau of Fire Protection</div>
 
             <ul class="navbar-nav ml-auto">
-                <li class="nav-item"><a class="nav-link" href="reports.html"><img style="margin-right: 15px;" src="images/file.png"
+                <li class="nav-item"><a style="color: white;" class="nav-link" href="mail.html"><img
+                            style="margin-right: 15px; height: 100%; width: 34px;" src="images/request.png"
+                            alt="">Inbox</a></li>
+                <li class="nav-item"><a style="color: white;" class="nav-link" href="reports.html"><img
+                            style="margin-right: 15px; height: 100%; width: 34px;" src="images/reports.png"
                             alt="">Reports</a></li>
-                <li class="nav-item"><a class="nav-link" href="index.html"><img style="margin-right: 15px;"
-                            src="images/logout.png" alt="">Logout</a></li>
+                <li class="nav-item"><a style="color: white;" class="nav-link" href="index.html"><img
+                            style="margin-right: 15px;" src="images/logout.png" alt="">Logout</a></li>
+
             </ul>
         </div>
     </nav>
@@ -48,8 +53,8 @@
 
     <main style="justify-content: center;" class="container-fluid content-wrapper">
         <br>
-        <div class="container">
-            <h2 style="text-align: center;" class="mb-4">Requests</h2>
+        <div style="padding-bottom: 90px;" class="container">
+            <h2 style="text-align: center; font-weight: bold;" class="mb-4">Requests</h2>
             <div class="row justify-content-center">
                 <div class="col-md-8">
                     <div class="card shadow">
@@ -57,66 +62,148 @@
                             <h4 class="mb-0">Equipment Request Form</h4>
                         </div>
                         <div class="card-body">
-                            <form action="mailto:admin.bfpr10@gmail.com" method="GET" enctype="text/plain">
+                            <form action="mail.html" onsubmit="alert('Your request is in process...')">
 
-                    <div class="form-row">
-                        <div class="form-group col-md-6">
-                            <label class="font-weight-bold">Personnel Name</label>
-                            <input type="text" name="Requester_Name" class="form-control" placeholder="Enter full name"
-                                required>
-                        </div>
-                        <div class="form-group col-md-6">
-                            <label class="font-weight-bold">Rank/Position</label>
-                            <input type="text" name="Rank" class="form-control" placeholder="e.g. FO1" required>
-                        </div>
-                    </div>
+                                <div class="form-row">
+                                    <div class="form-group col-md-6">
+                                        <label class="font-weight-bold">Personnel Name</label>
+                                        <input type="text" name="Requester_Name" class="form-control"
+                                            placeholder="Enter full name" required>
+                                    </div>
+                                    <div class="form-group col-md-6">
+                                        <label class="font-weight-bold">Rank/Position</label>
+                                        <input type="text" name="Rank" class="form-control" placeholder="e.g. FO1"
+                                            required>
+                                    </div>
+                                </div>
 
-                    <div class="form-group">
-                        <label class="font-weight-bold">Email Address</label>
-                        <input type="email" name="Email" class="form-control" placeholder="Enter email address" required>
-                    </div>
+                                <div class="form-group">
+                                    <label class="font-weight-bold">Email Address</label>
+                                    <input type="email" name="Email" class="form-control"
+                                        placeholder="Enter email address" required>
+                                </div>
 
-                    <div class="form-group">
-                        <label class="font-weight-bold">Equipment Category</label>
-                        <select name="Equipment_Type" class="form-control" required>
-                            <option value="" disabled selected>Select equipment...</option>
-                            <option value="Firefighting Gear">Firefighting Gear (PPE, Helmets)</option>
-                            <option value="Rescue Tools">Rescue Tools (Hose, Nozzles)</option>
-                            <option value="Medical Supplies">Medical Supplies/First Aid</option>
-                            <option value="Office Supplies">Office/Logistics Supplies</option>
-                            <option value="Vehicle Parts">Vehicle Maintenance Parts</option>
-                        </select>
-                    </div>
+                                <div class="form-group">
+                                    <label class="font-weight-bold">Equipment Category (Select all that apply)</label>
+                                    <div class="row px-3">
+                                        <div class="col-md-6">
+                                            <div class="custom-control custom-checkbox mb-2">
+                                                <input type="checkbox" name="Category" value="Coat"
+                                                    class="custom-control-input" id="cat_coat">
+                                                <label class="custom-control-label" for="cat_coat">Fireman's
+                                                    Coat</label>
+                                            </div>
+                                            <div class="custom-control custom-checkbox mb-2">
+                                                <input type="checkbox" name="Category" value="Trousers"
+                                                    class="custom-control-input" id="cat_trousers">
+                                                <label class="custom-control-label" for="cat_trousers">Fireman's
+                                                    Trousers</label>
+                                            </div>
+                                            <div class="custom-control custom-checkbox mb-2">
+                                                <input type="checkbox" name="Category" value="Boots"
+                                                    class="custom-control-input" id="cat_boots">
+                                                <label class="custom-control-label" for="cat_boots">Fire Boots</label>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="custom-control custom-checkbox mb-2">
+                                                <input type="checkbox" name="Category" value="Rescue Tools"
+                                                    class="custom-control-input" id="cat_tools">
+                                                <label class="custom-control-label" for="cat_tools">Rescue Tools /
+                                                    SCBA</label>
+                                            </div>
+                                            <div class="custom-control custom-checkbox mb-2">
+                                                <input type="checkbox" name="Category" value="Medical"
+                                                    class="custom-control-input" id="cat_med">
+                                                <label class="custom-control-label" for="cat_med">Medical
+                                                    Supplies</label>
+                                            </div>
+                                            <div class="custom-control custom-checkbox mb-2">
+                                                <input type="checkbox" name="Category" value="Other"
+                                                    class="custom-control-input" id="cat_other">
+                                                <label class="custom-control-label" for="cat_other">Other /
+                                                    Logistics</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
 
-                    <div class="form-group">
-                        <label class="font-weight-bold">Priority Level</label>
-                        <div class="d-flex p-2 border rounded">
-                            <div class="custom-control custom-radio mr-4">
-                                <input type="radio" id="low" name="Priority" value="Low" class="custom-control-input">
-                                <label class="custom-control-label" for="low">Low</label>
-                            </div>
-                            <div class="custom-control custom-radio mr-4">
-                                <input type="radio" id="med" name="Priority" value="Medium" class="custom-control-input"
-                                    checked>
-                                <label class="custom-control-label" for="med">Medium</label>
-                            </div>
-                            <div class="custom-control custom-radio">
-                                <input type="radio" id="high" name="Priority" value="High" class="custom-control-input">
-                                <label class="custom-control-label" for="high">High</label>
-                            </div>
-                        </div>
-                    </div>
+                                <div class="form-group border p-3 rounded bg-light">
+                                    <label class="font-weight-bold">Size Specifications (If applicable)</label>
+                                    <div class="row">
+                                        <div class="col-md-4">
+                                            <p class="mb-1 text-muted small">Coat / Trousers Sizes:</p>
+                                            <div class="custom-control custom-checkbox"><input type="checkbox"
+                                                    name="Size" value="Med" class="custom-control-input" id="s_m"><label
+                                                    class="custom-control-label" for="s_m">Medium</label></div>
+                                            <div class="custom-control custom-checkbox"><input type="checkbox"
+                                                    name="Size" value="Lrg" class="custom-control-input" id="s_l"><label
+                                                    class="custom-control-label" for="s_l">Large</label></div>
+                                        </div>
+                                        <div class="col-md-8 border-left">
+                                            <p class="mb-1 text-muted small">Boot Sizes (EU):</p>
+                                            <div class="d-flex flex-wrap">
+                                                <div class="custom-control custom-checkbox mr-3"><input type="checkbox"
+                                                        name="Boot" value="41" class="custom-control-input"
+                                                        id="b41"><label class="custom-control-label"
+                                                        for="b41">41</label></div>
+                                                <div class="custom-control custom-checkbox mr-3"><input type="checkbox"
+                                                        name="Boot" value="42" class="custom-control-input"
+                                                        id="b42"><label class="custom-control-label"
+                                                        for="b42">42</label></div>
+                                                <div class="custom-control custom-checkbox mr-3"><input type="checkbox"
+                                                        name="Boot" value="44" class="custom-control-input"
+                                                        id="b44"><label class="custom-control-label"
+                                                        for="b44">44</label></div>
+                                                <div class="custom-control custom-checkbox mr-3"><input type="checkbox"
+                                                        name="Boot" value="45" class="custom-control-input"
+                                                        id="b45"><label class="custom-control-label"
+                                                        for="b45">45</label></div>
+                                                <div class="custom-control custom-checkbox mr-3"><input type="checkbox"
+                                                        name="Boot" value="46" class="custom-control-input"
+                                                        id="b46"><label class="custom-control-label"
+                                                        for="b46">46</label></div>
+                                                <div class="custom-control custom-checkbox mr-3"><input type="checkbox"
+                                                        name="Boot" value="47" class="custom-control-input"
+                                                        id="b47"><label class="custom-control-label"
+                                                        for="b47">47</label></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
 
-                    <div class="form-group">
-                        <label class="font-weight-bold">Quantity & Description</label>
-                        <textarea name="Details" class="form-control" rows="4"
-                            placeholder="List items and quantities needed..."></textarea>
-                    </div>
+                                <div class="form-group">
+                                    <label class="font-weight-bold">Priority Level</label>
+                                    <div class="d-flex p-2 border rounded">
+                                        <div class="custom-control custom-radio mr-4">
+                                            <input type="radio" id="low" name="Priority" value="Low"
+                                                class="custom-control-input">
+                                            <label class="custom-control-label" for="low">Low</label>
+                                        </div>
+                                        <div class="custom-control custom-radio mr-4">
+                                            <input type="radio" id="med" name="Priority" value="Medium"
+                                                class="custom-control-input" checked>
+                                            <label class="custom-control-label" for="med">Medium</label>
+                                        </div>
+                                        <div class="custom-control custom-radio">
+                                            <input type="radio" id="high" name="Priority" value="High"
+                                                class="custom-control-input">
+                                            <label class="custom-control-label" for="high">High</label>
+                                        </div>
+                                    </div>
+                                </div>
 
-                            <button type="submit" class="btn btn-block font-weight-bold text-white shadow-sm"
-                                style="background: linear-gradient(90deg, #FDB833, #F37021); border: none; padding: 12px; border-radius: 10px;">
-                                SEND REQUEST TO GMAIL
-                            </button>
+                                <div class="form-group">
+                                    <label class="font-weight-bold">Quantity & Description</label>
+                                    <textarea name="Details" class="form-control" rows="4"
+                                        placeholder="List items and quantities needed..."></textarea>
+                                </div>
+
+                                <button class="btn btn-block font-weight-bold text-white shadow-sm"
+                                    style="background: linear-gradient(90deg, #FDB833, #F37021); border: none; padding: 12px; border-radius: 10px;"
+                                    type="submit">
+                                    SEND REQUEST TO GMAIL
+                                </button>
                             </form>
                         </div>
                     </div>

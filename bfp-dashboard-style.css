@@ -81,6 +81,10 @@ main {
     text-decoration: none;
 }
 
+.sidebar a.active {
+    background-color: #F37021;
+    color: white;
+}
 
 .sidebar a:hover {
     background-color: #FDB833;
@@ -138,7 +142,13 @@ footer {
 }
 
 /* Style the active/current link */
-.pagination a.active {
+.pagination a.active,
+#page1:target ~ a[href="#page1"],
+#page2:target ~ a[href="#page2"],
+#page3:target ~ a[href="#page3"],
+#page4:target ~ a[href="#page4"],
+#page5:target ~ a[href="#page5"],
+#page6:target ~ a[href="#page6"] {
   background-color: dodgerblue;
   color: white;
 }
